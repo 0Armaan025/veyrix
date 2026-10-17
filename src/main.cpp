@@ -142,6 +142,45 @@ int main() {
     int width = 0;
     int height = 0;
     SDL_GetRendererOutputSize(renderer, &width, &height);
+
+    fillRect(renderer, 0, 0, width, height, BACKGROOUND);
+    fillRect(renderer, 0, 0, 220, height, SIDEBAR);
+    drawText(renderer, headingFont, "VEYRIX", 28, 28, TEXT);
+    drawText(renderer, font, "LINUX CONTROL CENTER", 28, 65, MUTED);
+
+    drawText(renderer, font, "> Overview", 30, 125, ACCENT);
+    drawText(renderer, font, "  Processes", 30, 169, TEXT);
+    drawText(renderer, font, "  Resources", 30, 213, TEXT);
+    drawText(renderer, font, "  Applications", 30, 257, TEXT);
+    drawText(renderer, font, "  Hyprland", 30, 301, TEXT);
+    drawText(renderer, font, "  Utilities", 30, 345, TEXT);
+
+    drawText(renderer, headingFont, "System overview", 252, 28, TEXT);
+    drawText(renderer, font, "Your machine. Your tools.", 254, 68, MUTED);
+
+    const int gap = 18;
+    const int cardWidth = (width - 220 - 64 - gap) / 2;
+    fillRect(renderer, 252, 120, cardWidth, 145, PANEL);
+
+    fillRect(renderer, 252 + cardWidth + gap, 120, cardWidth, 145, PANEL);
+
+    fillRect(renderer, 252, 285, width - 284, 210, PANEL);
+
+    drawText(renderer, font, "CPU USAGE", 272, 140, MUTED);
+    drawText(renderer, headingFont, "-- %", 272, 176, ACCENT);
+    drawText(renderer, font, "Waiting for system sampler", 272, 218, MUTED);
+
+    drawText(renderer, font, "MEMORY USAGE", 272 + cardWidth + gap, 140, MUTED);
+    drawText(renderer, headingFont, "-- / -- GiB", 272 + cardWidth + gap, 176,
+             ACCENT);
+    drawText(renderer, font, "Waiting for system sampler",
+             272 + cardWidth + gap, 218, MUTED);
+
+    drawText(renderer, headingFont, "Processes", 272, 307, TEXT);
+    drawText(renderer, font, "The process table will appear here.", 272, 351,
+             MUTED);
+
+    SDL_RenderPresent(renderer);
   }
 
   TTF_CloseFont(headingFont);

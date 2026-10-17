@@ -1,0 +1,3 @@
+/home/armaan025/Desktop/ARMAAN/Coding/Projects/veyrix/build/CMakeFiles/veyrix.dir
+/home/armaan025/Desktop/ARMAAN/Coding/Projects/veyrix/build/CMakeFiles/edit_cache.dir
+/home/armaan025/Desktop/ARMAAN/Coding/Projects/veyrix/build/CMakeFiles/rebuild_cache.dir

@@ -19,13 +19,13 @@ add_executable(veyrix
     src/main.cpp
 )
 
-target_link_libraries(nexus-cc
+target_link_libraries(veyrix
     PRIVATE
         PkgConfig::SDL2
         PkgConfig::SDL2_TTF
 )
 
-target_compile_options(nexus-cc PRIVATE
+target_compile_options(veyrix PRIVATE
     -Wall
     -Wextra
     -Wpedantic
